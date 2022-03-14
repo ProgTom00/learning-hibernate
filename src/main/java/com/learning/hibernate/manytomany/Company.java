@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @NamedNativeQueries({
         @NamedNativeQuery(
                 name = "Company.retrieveCompaniesWithThreeLetters",
@@ -15,7 +14,7 @@ import java.util.List;
         ),
         @NamedNativeQuery(
                 name = "Company.retrieveCompaniesWithTheFragment",
-                query = "SELECT * FROM COMPANIES WHERE NAME LIKE :INPUT",
+                query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE :INPUT",
                 resultClass = Company.class
         )
 })

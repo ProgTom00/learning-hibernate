@@ -8,11 +8,11 @@ import java.util.List;
 
 @NamedQuery(
         name = "Employee.retrieveEmployeeWithLastname",
-        query = "SELECT * FROM EMPLOYEES WHERE lastname = :LASTNAME"
+        query = "FROM Employee WHERE lastname = :LASTNAME"
 )
 @NamedNativeQuery(
         name = "Employee.retrieveEmployeeWithTheFragment",
-        query = "SELECT * FROM EMPLOYEES WHERE WHERE FIRSTNAME LIKE :INPUT OR LASTNAME LIKE :INPUT",
+        query = "SELECT * FROM EMPLOYEES WHERE FIRSTNAME LIKE :INPUT OR LASTNAME LIKE :INPUT",
         resultClass = Employee.class
 
 )
